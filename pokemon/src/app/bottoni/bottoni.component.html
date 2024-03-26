@@ -1,0 +1,55 @@
+<link href="https://fonts.cdnfonts.com/css/pricedown" rel="stylesheet">
+<ng-template [ngIf]="page==='home'">
+<div class="container">
+    <div class="divimg pt-3">
+      <img src="../assets/img/logop.jpg" class="img-fluid" width="350px">
+    </div>
+      <img src="../assets/img/pika.png" class="img-fluid" width="200px">
+  </div>
+  <div class="pokemon-testo">
+    <p>
+        Nella pittoresca regione di Unima, dove l'aria è sempre piena di avventure e di sorprese,
+         si era diffusa una strana voce. I Pokémon, amici fedeli degli abitanti, sembravano comportarsi in modo strano,
+          agitati e fuori controllo avevano inizatto a commettere atti criminali. 
+          L'origine di questo strano comportamento si celava dietro un misterioso fungo magico... 
+    </p>
+</div>
+
+<div class="container2">
+  <button (click)="bottonesnivy($event)" class="button">{{nome1}}🌱</button>
+  <button (click)="bottonetepig($event)" class="button">{{nome2}}🔥</button>
+  <button (click)="bottoneoshawott($event)" class="button">{{nome3}}💧</button>
+  </div>
+</ng-template>
+
+
+<ng-template [ngIf]="page==='snivy'">
+<div class="containerp">
+  <h1>nome:{{nome1}}</h1>
+<img src="../../assets/img/starter_erba.jpg" class="img-fluid" width="200px">
+<p>tipo:{{tipo1}}</p>
+  <p>altezza:{{altezza1}}</p>
+    <p>percorso:{{percorso1}}</p>
+<button class="button" (click)="bottonehome($event)" >🏠</button>
+</div>
+</ng-template>
+<ng-template [ngIf]="page==='tepig'">
+<div class="containerp">
+    <h1>nome:{{nome2}}</h1>
+    <img src="../../assets/img/starter fuoco.jpg" class="img-fluid" width="200px">
+    <p>tipo:{{tipo2}}</p>
+      <p>altezza:{{altezza2}}</p>
+      <p>percorso:{{percorso2}}</p>
+    <button class="button"(click)="bottonehome($event)" >🏠</button>
+</div>
+</ng-template>
+<ng-template [ngIf]="page==='oshawott'">
+  <div class="containerp">
+    <h1>nome:{{nome3}}</h1>
+    <img src="../../assets/img/starter acqua.jpg" class="img-fluid" width="200px">
+    <p>tipo:{{tipo3}}</p>
+    <p>altezza:{{altezza3}}</p>
+    <p>percorso:{{percorso3}}</p>
+    <button class="button" (click)="bottonehome($event)" >🏠</button>
+  </div>
+</ng-template>

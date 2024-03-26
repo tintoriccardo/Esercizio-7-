@@ -1,66 +1,40 @@
-// pokemon.component.ts
 
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
+
 @Component({
-  selector: 'app-pokemon',
-  templateUrl: './pokemon.component.html',
-  styleUrls: ['./pokemon.component.css']
+  selector: 'app-bottoni',
+  standalone: true,
+  imports:[CommonModule],
+  templateUrl:'./bottoni.component.html',
+  styleUrl: './bottoni.component.css'
 })
-export class PokemonComponent {
-  bottone1: boolean = false;
-  bottone2: boolean = false;
-  bottone3: boolean = false;
-  info1: boolean = false;
-  info2: boolean = false;
-  info3: boolean = false;
-
-  pokemon = [
-    {
-      nome: 'Bulbasaur',
-      tipo: 'Erba/Veleno',
-      altezza: '0.7 m',
-      peso: '6.9 kg',
-      colore: 'Verde',
-      cattura: 'Bosco Smeraldo, Zona Safari'
-    },
-    {
-      nome: 'Charmander',
-      tipo: 'Fuoco',
-      altezza: '0.6 m',
-      peso: '8.5 kg',
-      colore: 'Rosso',
-      cattura: 'Monte Ardent, Grotta Celeste'
-    },
-    {
-      nome: 'Squirtle',
-      tipo: 'Acqua',
-      altezza: '0.5 m',
-      peso: '9 kg',
-      colore: 'Blu',
-      cattura: 'Isola Cannella, Grotta Celeste'
-    }
-  ];
-
-  mostra_info1() {
-    this.bottone1 = true;
-    this.info1 = !this.info1;
-    this.info2 = false;
-    this.info3 = false;
+export class BottoniComponent{
+ page:string='home'
+  nome1:string='snivy'
+  nome2:string='tepig'
+  nome3:string='oshawott'
+  tipo1:string='erba'
+  tipo2:string='fuoco'
+  tipo3:string='acqua'
+  altezza1:string='0,33cm'
+  altezza2:string='0,66cm'
+  altezza3:string='11m'
+  percorso1:string='corso como'
+  percorso2:string='porta garibaldi'
+  percorso3:string='via fulvio testi'
+  bottonesnivy(event:any){
+this.page='snivy'
   }
-
-  mostra_info2() {
-    this.bottone2 = true;
-    this.info1 = false;
-    this.info2 = !this.info2;
-    this.info3 = false;
+  bottonetepig(event:any){
+    this.page='tepig'
+    
   }
-
-  mostra_info3() {
-    this.bottone3 = true;
-    this.info1 = false;
-    this.info2 = false;
-    this.info3 = !this.info3;
+  bottoneoshawott(event:any){
+    this.page='oshawott'
+  }
+  bottonehome(event:any){
+    this.page='home'
   }
 }
-
